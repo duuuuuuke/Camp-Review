@@ -1,0 +1,144 @@
+.app__newCamp {
+    margin: 8rem auto 0;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.37);
+    padding: 3rem;
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+.app__newCamp-form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    a {
+        font-size: 1.6rem;
+        color: #4361ee;
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 980px) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 70%;
+    }
+}
+
+.app__newCamp-input {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+        padding: 0.75rem 1.25rem;
+        border-radius: 5px;
+        border: 1px solid #b7c8d4;
+        font-size: 1.8rem;
+        outline: none;
+        background-color: #eaedf0;
+    }
+}
+
+.app__newCamp-button {
+    max-width: 30%;
+    padding: 1rem 1.25rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #4361ee;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #3a4bb0;
+    }
+
+    &:disabled {
+        background-color: #8c99a3;
+        cursor: not-allowed;
+    }
+}
+
+.app__image-input {
+    display: flex;
+    gap: 1rem;
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        padding: 1rem 1.25rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #4361ee;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #3a4bb0;
+        }
+    }
+}
+
+.app__newCamp-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #b7c8d4;
+    border-radius: 5px;
+    padding: 1rem;
+
+    .app__newImage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        img {
+            width: 110px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+            color: red;
+            font-size: 1.4rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+}

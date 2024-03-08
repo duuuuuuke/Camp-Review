@@ -1,0 +1,119 @@
+.app__login-container {
+    width: 70%;
+    min-height: 60rem;
+    margin: 12rem auto 0;
+    display: flex;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 8rem;
+        padding-bottom: 2rem;
+        gap: 1rem;
+    }
+}
+
+.app__login-img {
+    width: 50%;
+    min-height: 100%;
+    border-radius: 10px 0 0 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+        @media screen and (max-width: 768px) {
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.app__login-formContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.app__login-form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .app__login-input {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                padding: 0.75rem 1.25rem;
+                border-radius: 5px;
+                border: 1px solid #b7c8d4;
+                font-size: 1.8rem;
+                outline: none;
+                background-color: #eaedf0;
+            }
+
+            .errorText {
+                color: red;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .app__login-btn {
+        max-width: 30%;
+        padding: 1rem 1.25rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #4361ee;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #3a4bb0;
+        }
+
+        &:disabled {
+            background-color: #8c99a3;
+            cursor: not-allowed;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 85%;
+        gap: 1rem;
+    }
+}

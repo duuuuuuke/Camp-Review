@@ -1,0 +1,149 @@
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.app__navbar-logo {
+    font-size: 2rem;
+    font-weight: 600;
+
+    span {
+        color: #4361ee;
+    }
+}
+
+.app__navbar-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+        margin: 0 1rem;
+        flex-direction: column;
+
+        a {
+            color: var(--main-gray);
+            transition: all 0.3s ease-in-out;
+            font-size: 1.6rem;
+
+            &:hover {
+                color: var(--main-white);
+            }
+        }
+
+        a.active {
+            color: var(--main-white);
+        }
+
+        span {
+            color: #4361ee;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.app__navbar-menu {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--main-blue);
+
+    svg {
+        width: 80%;
+        height: 80%;
+        color: var(--main-white);
+    }
+
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        padding: 1rem;
+        width: 80%;
+        height: 100dvh;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        background-color: var(--main-white);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+        svg {
+            width: 35px;
+            height: 35px;
+            color: var(--main-blue);
+            margin: 0.5rem 1rem;
+        }
+
+        ul {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10rem;
+
+            li {
+                margin: 3rem;
+
+                a {
+                    color: var(--main-gray);
+                    font-size: 2rem;
+
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: var(--main-black);
+                    }
+                }
+
+                span {
+                    color: #4361ee;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    margin: 0.25rem;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}

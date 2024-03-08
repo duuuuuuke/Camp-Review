@@ -1,0 +1,14 @@
+.env
+client/.env
+server/seeds/
+# Ignore node_modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore the build directory
+/dist
+
+# Ignore .DS_Store
+.DS_Store
