@@ -60,14 +60,14 @@ app.use("/api/auth", userRoutes);
 app.use("/api/campgrounds", campgroundRoutes);
 app.use("/api/campgrounds/:id/reviews", reviewRoutes);
 
-app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(__dirname, "..", "client", "dist")));
 
 // mongo sanitize
 app.use(mongoSanitize());
 
 // error handling
 app.get("*", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
 });
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "Something went wrong" } = err;
