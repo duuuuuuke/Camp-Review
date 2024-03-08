@@ -9,6 +9,6 @@ node_modules/
 
 # Ignore the build directory
 /dist
-
+client/dist
 # Ignore .DS_Store
 .DS_Store

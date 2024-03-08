@@ -16,6 +16,9 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 
 const mongoSanitize = require("express-mongo-sanitize");
+const path = require("path");
+
+const __dirname = path.resolve();
 
 // connect to MongoDB
 mongoose
@@ -59,12 +62,14 @@ app.use("/api/auth", userRoutes);
 app.use("/api/campgrounds", campgroundRoutes);
 app.use("/api/campgrounds/:id/reviews", reviewRoutes);
 
+app.use(express.static(path.join(__dirname, "/client/dist")));
+
 // mongo sanitize
 app.use(mongoSanitize());
 
 // error handling
-app.all("*", (req, res, next) => {
-    next(new ExpressError("Page not found", 404));
+app.get("*", (req, res, next) => {
+    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "Something went wrong" } = err;
