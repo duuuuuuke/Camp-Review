@@ -18,8 +18,6 @@ const User = require("./models/user");
 const mongoSanitize = require("express-mongo-sanitize");
 const path = require("path");
 
-const __dirname = path.resolve();
-
 // connect to MongoDB
 mongoose
     .connect(process.env.MONGO_URI)
